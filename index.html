@@ -9,6 +9,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    /* Add these rules to your existing CSS */
+.content-section,
+.section-description,
+.media-caption p,
+.hero-subheading {
+  text-align: left !important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.7;
+  color: #444;
+  font-weight: 400;
+}
+
+.page-heading h2,
+.hero h1 {
+  text-align: center !important;
+}
+
+.content-section ul,
+.content-section ol {
+  text-align: left !important;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.media-caption {
+  text-align: left !important;
+}
+
+.content-section p {
+  text-align: left !important;
+  margin-bottom: 15px;
+}
+
+/* Ensure bullet points are properly indented */
+.content-section li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+  color: #444;
+}
     * {
       margin: 0;
       padding: 0;
@@ -27,7 +67,7 @@
       background: #ffffff;
     }
 
-    /* TOP BAR - NOW BLUE & THINNER */
+    /* TOP BAR - BLUE & THINNER */
     .top-bar {
       background: #001f3f;
       color: white;
@@ -285,7 +325,7 @@
       padding: 0 40px;
     }
 
-    /* HERO SECTION - FULL WIDTH CONTENT */
+    /* HERO SECTION */
     .hero {
       padding: 50px 0;
       text-align: center;
@@ -311,9 +351,10 @@
       line-height: 1.6;
       padding: 0 20px;
       text-align: center;
+      white-space: pre-wrap; /* Preserve formatting */
     }
 
-    /* SECTION STYLES - FULL WIDTH */
+    /* SECTION STYLES */
     .section {
       margin-bottom: 50px;
       width: 100%;
@@ -349,7 +390,7 @@
       border-radius: 2px;
     }
 
-    /* SECTION DESCRIPTION - FULL WIDTH & BOLD */
+    /* SECTION DESCRIPTION - FULL WIDTH & PRESERVE FORMATTING */
     .section-description {
       font-size: 1rem;
       color: #1a1a1a;
@@ -361,9 +402,21 @@
       font-weight: 500;
       text-align: center;
       padding: 0 20px;
+      white-space: pre-wrap; /* Preserve formatting */
     }
 
-    /* MEDIA CONTAINERS - CLICKABLE */
+    /* CONTENT SECTION - PRESERVE FORMATTING */
+    .content-section {
+      width: 100%;
+      margin: 30px 0;
+      white-space: pre-wrap; /* Preserve formatting */
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #444;
+      font-weight: 400;
+    }
+
+    /* MEDIA CONTAINERS */
     .media-container {
       margin: 25px 0;
       width: 100%;
@@ -418,6 +471,7 @@
       font-size: 0.9rem;
       line-height: 1.5;
       font-weight: 500;
+      white-space: pre-wrap; /* Preserve formatting */
     }
 
     /* VIDEO GRID */
@@ -448,87 +502,6 @@
       margin: 0;
       border-radius: 6px;
       aspect-ratio: 16/10;
-    }
-
-    /* LOGO INPUT MODAL */
-    .logo-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-modal.active {
-      display: flex;
-    }
-
-    .logo-modal-content {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      width: 90%;
-      max-width: 480px;
-      text-align: center;
-    }
-
-    .logo-modal h3 {
-      margin-bottom: 18px;
-      color: #1a1a1a;
-      font-size: 1.3rem;
-    }
-
-    .logo-modal input {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #e0e0e0;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      font-size: 15px;
-    }
-
-    .logo-modal input:focus {
-      outline: none;
-      border-color: #27ae60;
-    }
-
-    .logo-modal-buttons {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-    }
-
-    .logo-modal-btn {
-      padding: 11px 22px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.3s;
-      font-size: 14px;
-    }
-
-    .logo-modal-btn.primary {
-      background: #27ae60;
-      color: white;
-    }
-
-    .logo-modal-btn.primary:hover {
-      background: #229954;
-    }
-
-    .logo-modal-btn.secondary {
-      background: #f0f0f0;
-      color: #333;
-    }
-
-    .logo-modal-btn.secondary:hover {
-      background: #e0e0e0;
     }
 
     /* FOOTER */
@@ -751,52 +724,6 @@
       margin: 25px 0;
     }
 
-    /* CONTENT STYLES - PROFESSIONAL */
-    .content-section {
-      width: 100%;
-      margin: 30px 0;
-    }
-
-    .content-section h3 {
-      font-size: 1.5rem;
-      color: #1a1a1a;
-      font-weight: 700;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .content-section p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.8;
-      margin-bottom: 15px;
-      font-weight: 400;
-    }
-
-    .content-section a {
-      color: #27ae60;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    .content-section a:hover {
-      color: #229954;
-      text-decoration: underline;
-    }
-
-    .content-section ul,
-    .content-section ol {
-      margin-bottom: 15px;
-      padding-left: 20px;
-    }
-
-    .content-section li {
-      margin-bottom: 8px;
-      line-height: 1.7;
-      color: #444;
-    }
-
     /* RESPONSIVE */
     @media (max-width: 1024px) {
       .main-header .container,
@@ -894,11 +821,6 @@
       .footer-location iframe {
         height: 180px;
       }
-
-      .logo-modal-content {
-        width: 95%;
-        padding: 20px;
-      }
     }
 
     @media (max-width: 480px) {
@@ -959,19 +881,6 @@
           <i class="fas fa-phone"></i> +91 95085 78482
         </a>
         <a href="#" class="consult-btn">Consult Now</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- LOGO MODAL -->
-  <div class="logo-modal" id="logoModal">
-    <div class="logo-modal-content">
-      <h3>Customize Logo</h3>
-      <p style="margin-bottom: 15px; color: #666; font-size: 0.9rem;">Enter your logo image URL</p>
-      <input type="text" id="logoUrlInput" placeholder="https://example.com/your-logo.png">
-      <div class="logo-modal-buttons">
-        <button class="logo-modal-btn primary" id="applyLogoUrl">Apply</button>
-        <button class="logo-modal-btn secondary" id="closeLogoModal">Cancel</button>
       </div>
     </div>
   </div>
@@ -1101,7 +1010,7 @@
   </footer>
 
   <script>
-    // LOGO IS NOW HARDCODED TO YOUR URL
+    // LOGO IS HARDCODED
     const logoUrl = "https://www.unidifconsulting.com/wp-content/uploads/2020/07/logo-cropped.png";
 
     // Update all logo elements
@@ -1238,12 +1147,12 @@
               `;
             }
 
-            // Section description - FULL WIDTH & BOLD
+            // Section description - FULL WIDTH & PRESERVE FORMATTING
             if (section.description) {
               html += `<p class="section-description">${makeLinksClickable(section.description)}</p>`;
             }
 
-            // Content section for paragraphs
+            // Content section for paragraphs - PRESERVE FORMATTING
             if (section.content) {
               html += `<div class="content-section">${makeLinksClickable(section.content)}</div>`;
             }
